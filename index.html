@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call stack tree</title>
+</head>
+<body>
+    
+<script>
+
+
+
+function fib(n){
+
+if(n===1){
+    return 1;
+}
+
+
+
+
+let first=fib(n-1,console.log(`div left ${n-1}, address = ${n}`));
+console.log(`comming up middle, n = ${n}`);
+let second=fib(n-1,console.log(`div right ${n-1}, address = ${n}`));
+
+
+// return 1
+
+
+}
+
+fib(4);
+
+</script>
+
+</body>
+</html>
+
+
+<!-- index.html:24 div left 3, address = 4
+index.html:24 div left 2, address = 3
+index.html:24 div left 1, address = 2
+index.html:25 comming up middle, n = 2
+index.html:26 div right 1, address = 2
+index.html:25 comming up middle, n = 3
+index.html:26 div right 2, address = 3
+index.html:24 div left 1, address = 2
+index.html:25 comming up middle, n = 2
+index.html:26 div right 1, address = 2
+index.html:25 comming up middle, n = 4
+index.html:26 div right 3, address = 4
+index.html:24 div left 2, address = 3
+index.html:24 div left 1, address = 2
+index.html:25 comming up middle, n = 2
+index.html:26 div right 1, address = 2
+index.html:25 comming up middle, n = 3
+index.html:26 div right 2, address = 3
+index.html:24 div left 1, address = 2
+index.html:25 comming up middle, n = 2
+index.html:26 div right 1, address = 2 -->
